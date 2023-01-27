@@ -4,8 +4,14 @@ import { useSelector} from 'react-redux'
 import { useDispatch } from 'react-redux';
 // import { render , connect } from '@testing-library/react';
 import Styles from '../components/Counter.module.css'
+import styled from 'styled-components';
+import { ButtonWithAtribut, DarkThemeButton, SlectorButton, StyledButtonCounter } from './button/Button.styles';
+import OTP from './OTP';
 
+const StyledButton=styled.button`
 
+color:red
+`
 const Counter = () => {
   const counter = useSelector(state => state.counter);
   const show    =useSelector(state=>state.showCounter)
@@ -28,10 +34,17 @@ const Counter = () => {
   return (
     <div className={Styles.counter}>
       {show &&<h1>{counter}</h1>}
-      <button onClick={incrementHandler}>increment</button>
-      <button onClick={dcrementHandler}>dcrement</button>
-      <button onClick={increaseHandler}>increase</button>
-      <button onClick={toggleHandler}>toggle</button>
+      {/* <StyledButtonCounter onClick={incrementHandler}>increment</StyledButtonCounter>
+      <StyledButtonCounter onClick={dcrementHandler}>dcrement</StyledButtonCounter>
+      <StyledButtonCounter onClick={increaseHandler}>increase</StyledButtonCounter>
+      <StyledButtonCounter onClick={toggleHandler}>toggle</StyledButtonCounter>
+      <StyledButton onClick={toggleHandler}>togglebtn</StyledButton> */}
+{/* 
+      <SlectorButton>hover</SlectorButton>
+      <ButtonWithAtribut>ButtonAtribute</ButtonWithAtribut>
+      <DarkThemeButton>dark button</DarkThemeButton> */}
+
+      <OTP/>
 
     </div>
   )

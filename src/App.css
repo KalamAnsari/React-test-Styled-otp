@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.otp{
+  width: 50px;
+  margin: auto;
+}
+
+button{
+  width: 50px;
+  margin: auto;
+
+}
